@@ -18,6 +18,8 @@ print list(result),
 u2=db.lixb.find_one({"name":"listtt"})
 if u2 and hasattr(u2,"age"):
 	u2['age']+=3
+else：
+	print "No such attribute"
 db.lixb.save(u2)
 #update multiply records
 db.lixb.update({},{"$inc":{"age":10}},nulti=True)

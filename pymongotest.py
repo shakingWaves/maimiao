@@ -11,12 +11,12 @@ db.lixb.save(v)
 for i in range(10):
 	db.lixb.save({"name":"li"+str(i),"age":i+10})
 result=db.lixb.find()
-u=dict(name=listtt,age=25)
+u=dict(name="listtt",age=25)
 db.lixb.insert(u)
 print list(result),
 #update single
 u2=db.lixb.find_one({"name":"listtt"})
-if u2 and hasattr(u2,age):
+if u2 and hasattr(u2,"age"):
 	u2['age']+=3
 db.lixb.save(u2)
 #update multiply records
